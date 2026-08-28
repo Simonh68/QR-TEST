@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#102a43" />
+    <title>QR TEST — הפקת מבחן</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="shell teacher-shell">
+      <header class="topbar">
+        <div class="brand-mark" aria-hidden="true">Q</div>
+        <div>
+          <p class="eyebrow">אב־טיפוס למורה</p>
+          <h1>QR TEST</h1>
+        </div>
+      </header>
+
+      <section class="card intro-card">
+        <div>
+          <span class="pill">מבחן דמה</span>
+          <h2>אוצר מילים — ערכה 1</h2>
+          <p>10 שאלות · עד 10 כרטיסים · QR חד־פעמי בכל כרטיס</p>
+        </div>
+        <button id="create-code" class="primary-button">יצירת הכרטיס הראשון</button>
+      </section>
+
+      <section id="generated" class="deck-section hidden" aria-live="polite">
+        <div class="deck-heading">
+          <div>
+            <p class="eyebrow">כרטיסי מבחן</p>
+            <h2>כל החלקה יוצרת QR חדש</h2>
+          </div>
+          <span id="card-counter" class="card-counter">כרטיס 1 מתוך 10</span>
+        </div>
+
+        <div id="deck-viewport" class="deck-viewport" aria-label="כרטיסי QR">
+          <div id="deck-track" class="deck-track"></div>
+        </div>
+
+        <div class="deck-controls">
+          <p id="swipe-hint">משכו ימינה או שמאלה — אין חזרה לכרטיס הקודם</p>
+          <button id="next-card" class="secondary-button">כרטיס QR חדש</button>
+        </div>
+        <p id="teacher-message" class="inline-message centered-message" role="status"></p>
+      </section>
+    </main>
+    <script type="module" src="/teacher.js"></script>
+  </body>
+</html>

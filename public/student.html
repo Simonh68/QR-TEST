@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#102a43" />
+    <title>QR TEST — מבחן אוצר מילים</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="shell student-shell">
+      <header class="student-header">
+        <span class="mini-brand">QR TEST</span>
+        <span id="progress-label" class="progress-label hidden"></span>
+      </header>
+
+      <section id="loading-screen" class="card centered-screen">
+        <div class="spinner" aria-label="טוען"></div>
+        <p>בודקים את הקישור…</p>
+      </section>
+
+      <section id="welcome-screen" class="card centered-screen hidden">
+        <span class="pill">מבחן דמה</span>
+        <h1>מבחן אוצר מילים</h1>
+        <p>10 שאלות קצרות. הציון נקבע לפי התשובה הראשונה.</p>
+        <div class="notice-box">הקוד ייתפס למכשיר הזה רק לאחר הלחיצה הבאה.</div>
+        <button id="start-test" class="primary-button wide-button">התחלת המבחן</button>
+      </section>
+
+      <section id="question-screen" class="card question-card hidden">
+        <div class="progress-track"><span id="progress-bar"></span></div>
+        <p class="question-instruction">מה פירוש המילה?</p>
+        <h1 id="word" class="word"></h1>
+        <div id="options" class="options-grid"></div>
+        <div id="feedback" class="feedback hidden" aria-live="polite"></div>
+        <button id="next-question" class="primary-button wide-button hidden">לשאלה הבאה</button>
+      </section>
+
+      <section id="result-screen" class="card centered-screen result-card hidden">
+        <span class="result-icon" aria-hidden="true">✓</span>
+        <p class="eyebrow">המבחן הושלם</p>
+        <h1 id="score" class="score"></h1>
+        <p id="score-detail" class="score-detail"></p>
+        <p id="sync-message" class="inline-message"></p>
+        <button id="print-result" class="secondary-button wide-button">שמירה או הדפסה ל־PDF</button>
+      </section>
+
+      <section id="error-screen" class="card centered-screen hidden">
+        <span class="error-icon" aria-hidden="true">!</span>
+        <h1 id="error-title">לא ניתן לפתוח את המבחן</h1>
+        <p id="error-message"></p>
+        <button id="retry" class="secondary-button">ניסיון נוסף</button>
+      </section>
+    </main>
+    <script type="module" src="/student.js"></script>
+  </body>
+</html>

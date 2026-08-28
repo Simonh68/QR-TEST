@@ -1,0 +1,7 @@
+node_modules/
+data/codes.json
+data/codes.json.tmp
+.env
+.DS_Store
+coverage/
+
